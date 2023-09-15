@@ -49,9 +49,9 @@ https://image.tmdb.org/t/p/<<이미지 사이즈>>/<<유니크한 이미지 이�
 
 - Axios 인스턴스 만들기
     
-    - axios.js: 인스턴스 정보
+    - <a href='https://github.com/hwadong119/react-disney-plus-app/blob/main/src/api/axios.js'></a>axios.js</a>: 인스턴스 정보
 
-    - request.js: 요청 보낼 경로 정리
+    - <a href='https://github.com/hwadong119/react-disney-plus-app/blob/main/src/api/request.js'>request.js</a>: 요청 보낼 경로 정리
 
 <br><br>
 
@@ -68,3 +68,14 @@ https://image.tmdb.org/t/p/<<이미지 사이즈>>/<<유니크한 이미지 이�
   # with yarn
   yarn add styled-components
   ```
+
+<br><br>
+
+## Pending 해결 방법
+
+아직 Response가 오지 않은 펜딩한 상태가 아닌 결과값을 받은 이후에 값을 처리해주면 됨
+
+1. Async Request 
+  .then()
+
+2. Async Await 
