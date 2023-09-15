@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## API 발급
+https://www.themoviedb.org/ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+회원가입 후 API 발급
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+Get Movie by Latest
 
-### `npm start`
+https://www.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Get Movie Detail
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://www.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
 
-### `npm test`
+Get Movie Reviews
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://www.themoviedb.org/3/movie/{movie_id}/reviews?api_key=<<api_key>>&language=en-US&page=1
 
-### `npm run build`
+Get Trending
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://www.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+이미지 가져오기
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://image.tmdb.org/t/p/<<이미지 사이즈>>/<<유니크한 이미지 이름>>
 
-### `npm run eject`
+<br><br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## The Movie DB API 요청을 위한 Axios 인스턴스 생성 및 요청 보내기
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Axios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Axios는 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 백엔드와 프론트엔드가 통신을 쉽게하기 위해 Ajax와 더불어 사용
 
-## Learn More
+- Axios는 패치와 달리 바로 json 형식으로 받아옴
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 설치
+  ```terminal
+  npm install axios --save
+  ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 요청 예시
+  ```javascript
+  axios.get('https://api.themoviedb.org/3/trending/all/week/')
+  ```
 
-### Code Splitting
+- Axios 인스턴스 만들기
+    
+    - axios.js: 인스턴스 정보
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    - request.js: 요청 보낼 경로 정리
 
-### Analyzing the Bundle Size
+<br><br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Styled Component 
 
-### Making a Progressive Web App
+- Css-in-JS, JavaScript 파일 안에서 CSS를 처리할 수 있게 해주는 라이브러리
+- https://styled-components.com/docs/basics
+- 설치
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  ```terminal
+  # with npm
+  npm install styled-components
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  # with yarn
+  yarn add styled-components
+  ```
