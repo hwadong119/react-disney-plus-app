@@ -97,3 +97,12 @@ https://image.tmdb.org/t/p/<<이미지 사이즈>>/<<유니크한 이미지 이�
 - 이렇게 하면 UI코드가 모든 이벤트를 처리할 필요가 없고 서버로 전송되는 API 호출 수도 크게 줄어듦
 
 - <a href='https://github.com/hwadong119/react-disney-plus-app/blob/main/src/hooks/useDebounce.js'>src/hooks/useDebounce.js</a>
+
+<br><br>
+
+## useRef
+
+- 특정 DOM을 선택할 때 사용하는 React Hooks
+
+
+<br><br>

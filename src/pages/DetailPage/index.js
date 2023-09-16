@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from '../../api/axios';
 
 const DetailPage = () => {
-  
+
   let { movieId } = useParams();
   const [movie, setMovie] = useState({});
 
@@ -12,7 +12,6 @@ const DetailPage = () => {
       const response = await axios.get(
         `/movie/${movieId}`
       )
-      console.log(response);
       setMovie(response.data);
     }
     fetchData();
