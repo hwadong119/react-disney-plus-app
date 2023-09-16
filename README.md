@@ -90,3 +90,10 @@ https://image.tmdb.org/t/p/<<이미지 사이즈>>/<<유니크한 이미지 이�
 
 <br><br>
 
+## useDebounce Custom Hooks 만들기
+
+- debounce function은 사용자가 미리 결정된 시간 동안 타이핑을 멈출 때까지 keyup 이벤트의 처리를 지연시킴
+
+- 이렇게 하면 UI코드가 모든 이벤트를 처리할 필요가 없고 서버로 전송되는 API 호출 수도 크게 줄어듦
+
+- src/hooks/useDebounce.js
