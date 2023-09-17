@@ -1,3 +1,10 @@
+# 배포
+
+https://react-disney-plus-app-10092.web.app
+
+<br><br>
+
+
 ## API 발급
 https://www.themoviedb.org/ 
 
@@ -106,3 +113,96 @@ https://image.tmdb.org/t/p/<<이미지 사이즈>>/<<유니크한 이미지 이�
 
 
 <br><br>
+
+## Firebase를 이용해서 배포하기
+
+설치
+
+```terminal
+npm install -g firebase-tools
+```
+
+firebase 로그인
+
+```terminal
+firebase login
+```
+
+빌드
+
+```terminal
+npm run build
+```
+
+init
+
+```terminal
+firebase init
+```
+
+Hosting 선택
+
+Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+
+```terminal
+react-disney-plus-app % firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+...
+
+? Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selection, and
+ <enter> to proceed)
+❯◯ Realtime Database: Configure a security rules file for Realtime Database and (optionally) provision default instance
+ ◯ Firestore: Configure security rules and indexes files for Firestore
+ ◯ Functions: Configure a Cloud Functions directory and its files
+ ◯ Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+ ◯ Hosting: Set up GitHub Action deploys
+ ◯ Storage: Configure a security rules file for Cloud Storage
+ ◯ Emulators: Set up local emulators for Firebase products
+
+  
+```
+
+firebase 콘솔에서 프로젝트를 만들었기 때문에
+
+Use an existing project 선택
+
+```terminal
+? Please select an option: (Use arrow keys)
+❯ Use an existing project 
+  Create a new project 
+  Add Firebase to an existing Google Cloud Platform project 
+  Don't set up a default project 
+```
+
+만들어두었던 프로젝트 선택
+
+(react-disney-plus-app-10092 선택)
+
+```terminal
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: (Use arrow keys)
+❯ react-disney-plus-app-10092 (react-disney-plus-app) 
+  todolist-88269 (todolist) 
+```
+
+옵션 입력
+
+```terminal
+? What do you want to use as your public directory? build
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+? Set up automatic builds and deploys with GitHub? No
+? File build/index.html already exists. Overwrite? (y/N) n
+```
+
+deploy
+```terminal
+firebase deploy
+```
