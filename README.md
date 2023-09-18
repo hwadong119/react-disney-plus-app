@@ -206,3 +206,27 @@ deploy
 ```terminal
 firebase deploy
 ```
+
+<br><br>
+
+## 리덕스 스토어에 유저 데이터 넣어주기
+
+- 리덕스 설치
+
+  ```terminal
+  npm install @reduxjs/toolkit react-redux redux-persist
+  ```
+
+<br><br>
+
+## Redux-Persist
+
+- 리덕스 스토어에 있는 State들은 페이지를 새로고침하면 초기화되는 것을 볼 수 있음 
+
+- Redux Persist를 이용하면 페이지 새로 고침 후에도 상태를 유지할 수 있게 됨
+
+- 설치
+  ```terminal
+  npm i redux-persist
+  ```
+- 설정
